@@ -1,0 +1,10 @@
+# Klaystation_Calculator
+Klaystation_Calculator/클레이튼 초복리 계산식.txt
+Klaystation_Calculator/venv/
+Klaystation_Calculator/repo/conf/__pycache__
+Klaystation_Calculator/repo/conf/settings.py
+Klaystation_Calculator/repo/db.sqlite3
+Klaystation_Calculator/repo/db.sqlite3-journal
+*.log
+*.pot
+*.pyc
