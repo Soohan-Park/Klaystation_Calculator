@@ -3,6 +3,7 @@ from django.http import HttpRequest, HttpResponse
 
 # Create your views here.
 def index(request):
+    # Someday, 세션에 가장 마지막에 조회했던 주소를 자동으로 추천해주는 기능 넣기 (Session or Cookie 통해서)
     return render(request, 'KlayCalc/index.html')
 
 
