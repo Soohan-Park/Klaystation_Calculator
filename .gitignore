@@ -1,10 +1,19 @@
-# Klaystation_Calculator
+##### Klaystation_Calculator #####
+
+# Documents & environmnent
 클레이튼 초복리 계산식.txt
 venv/
+
+# repo
 repo/conf/__pycache__
 repo/conf/settings.py
 repo/db.sqlite3
 repo/db.sqlite3-journal
+
+### Update soon.
+repo/KlayCalc/static/images
+
+# global
 *.log
 *.pot
 *.pyc
