@@ -19,12 +19,15 @@ index/
 <br/>
 
 
-**Last Update:** 2020. 09. 18.  
+**Last Update:** 2020. 09. 25.  
 
 
 
 ### Version Log  
 
 
-> v0.0.1  
+> Vers. v0.0.1  
+> Date. 2020. 09. 25.  
 > Init.  
+> (Using Creative-Tim's "Sssoon" template.)  
+
