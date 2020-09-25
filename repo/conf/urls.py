@@ -18,5 +18,10 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
+    # Root Domain
+    path('', include('KlayCalc.urls')),
+
     path('KlayCalc/', include('KlayCalc.urls')),
+    
 ]
