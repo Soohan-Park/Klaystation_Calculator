@@ -19,7 +19,7 @@ index/
 <br/>
 
 
-**Last Update:** 2020. 09. 25.  
+**Last Update:** 2020. 09. 26.  
 
 
 
@@ -27,7 +27,7 @@ index/
 
 
 > Vers. v0.0.1  
-> Date. 2020. 09. 25.  
+> Date. 2020. 09. 26.  
 > Init.  
-> (Using Creative-Tim's "Sssoon" template.)  
+> (Using Creative-Tim's "Material Dashboard Dark Edition" template.)  
 
