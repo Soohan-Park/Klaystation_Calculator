@@ -1,0 +1,28 @@
+{% comment %} Common Sidebar {% endcomment %}
+
+<div class="sidebar" data-color="purple" data-background-color="black" data-image="/static/assets/img/sidebar-2.jpg">
+    <!--
+      Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+      Tip 2: you can also add an image using data-image tag
+    -->
+    <div class="logo">
+        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+          Creative Tim
+        </a>
+    </div>
+    <div class="sidebar-wrapper">
+        <ul class="nav">
+            <li class="nav-item active  ">
+                <a class="nav-link" href="javascript:void(0)">
+                    <i class="material-icons">dashboard</i>
+                    <p>Dashboard</p>
+                </a>
+            </li>
+          <!-- your sidebar here -->
+          {% comment %} 나중에 보여주는 페이지가 길어지면 거기로 스르륵 내려가서 이동하도록 만들기 {% endcomment %}
+        </ul>
+    </div>
+</div>
+
+{% comment %} End of Sidebar {% endcomment %}
