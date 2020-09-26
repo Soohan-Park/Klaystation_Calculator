@@ -22,6 +22,6 @@ urlpatterns = [
     # Root Domain
     path('', include('KlayCalc.urls')),
 
-    path('KlayCalc/', include('KlayCalc.urls')),
+    #path('KlayCalc/', include('KlayCalc.urls')),
     
 ]
