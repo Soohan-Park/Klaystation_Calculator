@@ -17,8 +17,34 @@
 
       <div class="content">
         <div class="container-fluid">
-          <!-- your content here -->
-          
+
+          {% comment %} your content here {% endcomment %}
+          <div class="card card-nav-tabs text-center" style="position: relative; top: 150px;">
+            <div class="card-header card-header-warning">
+              나의 KlayStation 이율 계산하기
+            </div>
+            <div class="card-body">
+              {% comment %} Input Address {% endcomment %}
+              <div class="form-group label-floating has-warning">
+                <label class="control-label">Klaytn Address 입력</label>
+                      <input type="text" class="form-control" placeholder="Klaytn Address.." id="addr"/>
+                <span class="form-control-feedback">
+                <i class="material-icons">done</i>
+                </span>
+              </div>
+              
+              <a href="#" class="btn btn-warning" id="calcBtn">Calc It!</a>
+            </div>
+          </div>
+
+          {% comment %} <div class="card" style="width: 20rem; position: relative; top: 200px;">
+            <img class="card-img-top" src="/static/klaycalcAssets/img/klaystation_logo.png" alt="Card image cap">
+            <div class="card-body">
+              <a href="https://klaystation.io/" class="btn btn-warning">Go to KlayStation</a>
+            </div>
+          </div> {% endcomment %}
+          {% comment %} End of Contents {% endcomment %}
+
         </div>
       </div>
       
@@ -30,7 +56,8 @@
 
   {% comment %} Import Default JS Files {% endcomment %}
   {% include './inc/default_JS_files.html' %}
-
+  {% comment %} Script {% endcomment %}
+  <script src='/static/klaycalcAssets/js/index.js'></script>
 </body>
 
 </html>
