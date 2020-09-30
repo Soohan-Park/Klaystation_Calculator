@@ -18,7 +18,23 @@
       <div class="content">
         <div class="container-fluid">
           <!-- your content here -->
-          
+          {% comment %} Donate Address {% endcomment %}
+          <div class="card card-nav-tabs text-center">
+            <div class="card-header card-header-warning">
+              Coffee for Dev!
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Thanks for Donate 😘</h4>
+              <br/>
+              <p class="card-text" id="donateAddr">0x2eC41C940731c6CEA7275888835F8c2A6B58Ad79</p>
+              <input id="copyDonateAddr" style="position:absolute; top:-9999em;" value="0x2eC41C940731c6CEA7275888835F8c2A6B58Ad79" />
+              <a href="#" class="btn btn-warning" id="copyAddr">Copy Address</a>
+            </div>
+          </div>
+
+          {% comment %} Donator List {% endcomment %}
+          {% comment %} 가이드 문서 내 Tables 참고 {% endcomment %}
+          {% comment %} End of Donator list {% endcomment %}
         </div>
       </div>
 
@@ -30,6 +46,8 @@
   
   {% comment %} Import Default JS Files {% endcomment %}
   {% include './inc/default_JS_files.html' %}
+  {% comment %} Script {% endcomment %}
+  <script src='/static/klaycalcAssets/js/donate.js'></script>
 </body>
 
 </html>
