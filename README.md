@@ -19,11 +19,16 @@ index/
 <br/>
 
 
-**Last Update:** 2020. 09. 26.  
+**Last Update:** 2020. 10. 01.  
 
 
 
 ### Version Log  
+
+
+> Vers. v0.0.2  
+> Date. 2020. 10. 01.  
+> Complete 'Donate' Page.  
 
 
 > Vers. v0.0.1  
