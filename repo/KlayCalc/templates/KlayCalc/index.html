@@ -21,21 +21,27 @@
           {% comment %} your content here {% endcomment %}
           <div class="card card-nav-tabs text-center" style="position: relative; top: 150px;">
             <div class="card-header card-header-warning">
-              Featured
+              나의 KlayStation 이율 계산하기
             </div>
             <div class="card-body">
-              <h4 class="card-title">Special title treatment</h4>
-              
               {% comment %} Input Address {% endcomment %}
               <div class="form-group label-floating has-warning">
-                <label class="control-label">Success input</label>
-                      <input type="text" class="form-control" placeholder="Input Address.."/>
+                <label class="control-label">Klaytn Address 입력</label>
+                      <input type="text" class="form-control" placeholder="Klaytn Address.."/>
                 <span class="form-control-feedback">
                 <i class="material-icons">done</i>
                 </span>
               </div>
               
               <a href="#" class="btn btn-warning">Calc It!</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 20rem; position: relative; top: 200px;">
+            <img class="card-img-top" src="/static/klaycalcAssets/img/klaystation_logo.png" alt="Card image cap">
+            <div class="card-body">
+              {% comment %} <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> {% endcomment %}
+              <a href="https://klaystation.io/" class="btn btn-warning">Go to KlayStation</a>
             </div>
           </div>
           {% comment %} End of Contents {% endcomment %}
@@ -52,7 +58,7 @@
   {% comment %} Import Default JS Files {% endcomment %}
   {% include './inc/default_JS_files.html' %}
   {% comment %} Script {% endcomment %}
-  <script src='/static/js/index.js'></script>
+  <script src='/static/klaycalcAssets/js/index.js'></script>
 </body>
 
 </html>
