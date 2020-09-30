@@ -11,4 +11,7 @@ urlpatterns = [
     path('account/<str:account_id>', views.account, name='account'),
     
     path('donate/', views.donate, name='donate'),
+
+    # Ajax
+    path('checkDonateAddr/', views.checkDonateAddr, name='checkDonateAddr')
 ]
