@@ -17,8 +17,29 @@
 
       <div class="content">
         <div class="container-fluid">
-          <!-- your content here -->
-          
+
+          {% comment %} your content here {% endcomment %}
+          <div class="card card-nav-tabs text-center" style="position: relative; top: 150px;">
+            <div class="card-header card-header-warning">
+              Featured
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Special title treatment</h4>
+              
+              {% comment %} Input Address {% endcomment %}
+              <div class="form-group label-floating has-warning">
+                <label class="control-label">Success input</label>
+                      <input type="text" class="form-control" placeholder="Input Address.."/>
+                <span class="form-control-feedback">
+                <i class="material-icons">done</i>
+                </span>
+              </div>
+              
+              <a href="#" class="btn btn-warning">Calc It!</a>
+            </div>
+          </div>
+          {% comment %} End of Contents {% endcomment %}
+
         </div>
       </div>
       
