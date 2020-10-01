@@ -18,7 +18,103 @@
       <div class="content">
         <div class="container-fluid">
           <!-- your content here -->
-          
+          {% comment %} 총 스테이킹 수량 {% endcomment %}
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-success card-header-icon">
+                      <div class="card-icon">
+                          <i class="material-icons">attach_money</i>
+                      </div>
+                      <p class="card-category">총 스테이킹 수량 (KLAY)</p>
+                      <h2 class="card-title">{{ total_staking }}</h2>
+                    </div>
+                    <div class="card-footer">
+                        {% comment %} <div class="stats">
+                            <i class="material-icons text-success">success</i>
+                            <a href="#pablo" class="success-link">Get More Space...</a>
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+
+            {% comment %} 누적 지급 보상 {% endcomment %}
+            <div class="col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-success card-header-icon">
+                      <div class="card-icon">
+                        <i class="material-icons">signal_cellular_alt</i>
+                      </div>
+                      <p class="card-category">누적 지급 보상 (KLAY)</p>
+                      <h2 class="card-title">{{ accumulated_reward }}</h2>
+                    </div>
+                    <div class="card-footer">
+                    </div>
+                </div>
+            </div>
+
+            {% comment %} 철회중인 수량 {% endcomment %}
+            <div class="col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-success card-header-icon">
+                      <div class="card-icon">
+                        <i class="material-icons">arrow_back</i>
+                      </div>
+                      <p class="card-category">철회중인 수량 (KLAY)</p>
+                      <h2 class="card-title">{{ refund }}</h2>
+                    </div>
+                    <div class="card-footer">
+                    </div>
+                </div>
+            </div>
+
+            {% comment %} 지갑 내 수량 {% endcomment %}
+            <div class="col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-success card-header-icon">
+                      <div class="card-icon">
+                        <i class="material-icons">account_balance_wallet</i>
+                      </div>
+                      <p class="card-category">지갑 내 수량 (KLAY)</p>
+                      <h2 class="card-title">{{ in_wallet }}</h2>
+                    </div>
+                    <div class="card-footer">
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <br/>
+          <br/>
+
+          {% comment %} 예상 보상 KLAY 계산 {% endcomment %}
+          <div class="card card-nav-tabs text-center">
+            <h4 class="card-header card-header-success">
+              <div class="dropdown">
+                내가 
+                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  오늘 하루
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">1 시간</a>
+                  <a class="dropdown-item" href="#">오늘 하루</a>
+                  <a class="dropdown-item" href="#">이번 주</a>
+                  <a class="dropdown-item" href="#">한 달</a>
+                  {% comment %} 직접 입력은 추후 개발 {% endcomment %}
+                  {% comment %} <a class="dropdown-item" href="#">직접 입력...</a> {% endcomment %}
+                </div>
+                동안 받을 수 있는 총 보상 수량은?
+              </div>
+            </h4>
+            <div class="card-body">
+              <br/>
+              <h3 class="card-title" id="calcReward">REWARD</h3> KLAY
+              <br/>
+              <br/>
+              <a href="#" class="btn btn-success">스테이크 굽기 !</a>
+            </div>
+          </div>
+
         </div>
       </div>
       
