@@ -26,5 +26,11 @@ index/
 ### Version Log  
 
 
-> v0.0.1  
+> Vers. v0.1.0  
+> Date. 2020. 10. 01.  
+> Complete 'Donate' Page.  
+
+
+> Vers. v0.0.1  
+> Date. 2020. 09. 26.  
 > Init.  
