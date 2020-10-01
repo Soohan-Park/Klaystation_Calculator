@@ -33,10 +33,7 @@ $.ajaxSetup({
 
 $(function () {
     $('#sidebar_donate').addClass('active')
-    $('#navbar_title').text('Donate')
-    $('#navbar_title').click( function () {
-        alert('이스터에그')
-    } )
+    $('#navbar_title').text('커피 한 잔')
 
     // 기부 주소 유효성 체크
     $.post(

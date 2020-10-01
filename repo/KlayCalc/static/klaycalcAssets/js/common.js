@@ -11,7 +11,7 @@ function calcSearch() {
     if (isValidAddr(addr)) {
         location.href = '/account/' + addr
     } else {
-        alert("ERROR")
+        alert("올바른 클레이튼 주소를 입력해주세요.")
     }
 
 }
