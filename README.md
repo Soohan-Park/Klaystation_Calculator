@@ -12,19 +12,32 @@
 ```txt
 index/
    ├ account/{account_id}
-   └ donate/
+   ├ donate/
+   ├ stats/ (추후 개발 예정)
+   └ feedback/ (추후 개발 예정)
 ```
 
 
 <br/>
 
 
-**Last Update:** 2020. 09. 18.  
+**Last Update:** 2020. 10. 02.  
 
 
 
 ### Version Log  
 
 
-> v0.0.1  
+> Vers. v0.2.0  
+> Date. 2020. 10. 02.  
+> Complete View Pages.  
+
+
+> Vers. v0.1.0  
+> Date. 2020. 10. 01.  
+> Complete 'Donate' Page.  
+
+
+> Vers. v0.0.1  
+> Date. 2020. 09. 26.  
 > Init.  

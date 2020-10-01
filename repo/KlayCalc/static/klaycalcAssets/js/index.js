@@ -3,20 +3,42 @@ function calcIndex(_addr) {
     if (isValidAddr(_addr)) {
         location.href = '/account/' + _addr
     } else {
-        alert("ERROR")
+        alert("올바른 클레이튼 주소를 입력해주세요.")
     }
-
 }
 
 
 $(function () {
     $('#sidebar_index').addClass('active')
-    $('#navbar_title').text('Main')
-    $('#navbar_title').click( function () {
-        alert('이스터에그')
-    } )
+    $('#navbar_title').text('메인')
+    
+    $('#checkMark_T').hide()
+    $('#checkMark_F').hide()
+    
+    
+    // 글자 수 조회
+    $('#addr').keyup( function () {
+        var address = $(this).val()
+        
+        if (address.length == 0) {
+            $('#checkMark_T').hide()
+            $('#checkMark_F').hide()
+        }
+        else if (address.length == 42) {
+            $('#checkMark_F').hide()
+            $('#checkMark_T').show()
+            $('#inputKlaytnAddr').removeClass('has-danger')
+            $('#inputKlaytnAddr').addClass('has-success')
+        }
+        else {
+            $('#checkMark_T').hide()
+            $('#checkMark_F').show()
+            $('#inputKlaytnAddr').removeClass('has-success')
+            $('#inputKlaytnAddr').addClass('has-danger')
+        }
+    })
 
-
+    // 주소 조회
     $('#calcBtn').click( function () {
         let addr = $('#addr').val()
 
