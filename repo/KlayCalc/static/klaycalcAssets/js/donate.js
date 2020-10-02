@@ -35,6 +35,8 @@ $(function () {
     $('#sidebar_donate').addClass('active')
     $('#navbar_title').text('커피 한 잔')
 
+    $('#loading').hide()
+
     // 기부 주소 유효성 체크
     $.post(
         '/checkDonateAddr/',

@@ -80,7 +80,7 @@ def account(request, account_id = None):
         
         # 일단 단리로 계산
         temp = float(total_staking)
-        temp = 123456.789  # TEST
+        # temp = 123456.789  # TEST
         reward_hour  = temp * rate 
         reward_day   = temp * rate * 24
         reward_week  = temp * rate * 24 * 7

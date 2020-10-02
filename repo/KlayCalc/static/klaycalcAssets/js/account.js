@@ -10,6 +10,8 @@ $(function () {
     $('#sidebar_account').addClass('active')
     $('#navbar_title').text('나의 KLAY 보상')
 
+    $('#loading').hide()
+
     // Calc Default Setting
     $('#calcMenu').text( $('#calcDay').text() )
     calcPer('calcDay')
