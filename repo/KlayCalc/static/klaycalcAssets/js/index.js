@@ -1,6 +1,7 @@
 function calcIndex(_addr) {
     // common.js -> isValidAddr
     if (isValidAddr(_addr)) {
+        $('#loading').show()
         location.href = '/account/' + _addr
     } else {
         alert("올바른 클레이튼 주소를 입력해주세요.")
@@ -12,6 +13,8 @@ $(function () {
     $('#sidebar_index').addClass('active')
     $('#navbar_title').text('메인')
     
+    $('#loading').hide()
+
     $('#checkMark_T').hide()
     $('#checkMark_F').hide()
     
