@@ -12,6 +12,11 @@ urlpatterns = [
     
     path('donate/', views.donate, name='donate'),
 
+
     # Ajax
-    path('checkDonateAddr/', views.checkDonateAddr, name='checkDonateAddr')
+    path('checkDonateAddr/', views.checkDonateAddr, name='checkDonateAddr'),
+
+
+    # test
+    path("test/", views.test, name="test"),
 ]
