@@ -41,5 +41,3 @@ index/
 > Vers. v0.0.1  
 > Date. 2020. 09. 26.  
 > Init.  
-> (Using Creative-Tim's "Material Dashboard Dark Edition" template.)  
-
