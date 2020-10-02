@@ -1,3 +1,11 @@
+function calcPer(_value) {
+    var target = $('#' + _value)
+    
+    $('#calcMenu').text( target.text() )
+    $('#calcReward').text( target.attr('value') )
+}
+
+
 $(function () {
     $('#sidebar_account').addClass('active')
     $('#navbar_title').text('나의 KLAY 보상')

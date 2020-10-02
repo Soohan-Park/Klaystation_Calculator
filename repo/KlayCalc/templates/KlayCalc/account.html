@@ -32,7 +32,7 @@
                           <i class="material-icons">attach_money</i>
                       </div>
                       <p class="card-category">총 스테이킹 수량 (KLAY)</p>
-                      <h2 class="card-title">{{ total_staking }}</h2>
+                      <h2 class="card-title">{{ parsed_data.total_staking }}</h2>
                     </div>
                     <div class="card-footer">
                         {% comment %} <div class="stats">
@@ -51,7 +51,7 @@
                         <i class="material-icons">signal_cellular_alt</i>
                       </div>
                       <p class="card-category">누적 지급 보상 (KLAY)</p>
-                      <h2 class="card-title">{{ accumulated_reward }}</h2>
+                      <h2 class="card-title">{{ parsed_data.accumulated_reward }}</h2>
                     </div>
                     <div class="card-footer">
                     </div>
@@ -66,7 +66,7 @@
                         <i class="material-icons">arrow_back</i>
                       </div>
                       <p class="card-category">철회중인 수량 (KLAY)</p>
-                      <h2 class="card-title">{{ refund }}</h2>
+                      <h2 class="card-title">{{ parsed_data.refund }}</h2>
                     </div>
                     <div class="card-footer">
                     </div>
@@ -81,7 +81,7 @@
                         <i class="material-icons">account_balance_wallet</i>
                       </div>
                       <p class="card-category">지갑 내 수량 (KLAY)</p>
-                      <h2 class="card-title">{{ in_wallet }}</h2>
+                      <h2 class="card-title">{{ parsed_data.in_wallet }}</h2>
                     </div>
                     <div class="card-footer">
                     </div>
@@ -97,14 +97,12 @@
             <h4 class="card-header card-header-success">
               <div class="dropdown">
                 내가 
-                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  오늘 하루
-                </button>
+                <button class="btn btn-success dropdown-toggle" type="button" id="calcMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">1 시간</a>
-                  <a class="dropdown-item" href="#">오늘 하루</a>
-                  <a class="dropdown-item" href="#">이번 주</a>
-                  <a class="dropdown-item" href="#">한 달</a>
+                  <a class="dropdown-item" href="#" name="calcPeriod" id="calcHour" value="{{parsed_data.reward_hour}}">1 시간</a>
+                  <a class="dropdown-item" href="#" name="calcPeriod" id="calcDay" value="{{parsed_data.reward_day}}">오늘 하루</a>
+                  <a class="dropdown-item" href="#" name="calcPeriod" id="calcWeek" value="{{parsed_data.reward_week}}">이번 주</a>
+                  <a class="dropdown-item" href="#" name="calcPeriod" id="calcMonth" value="{{parsed_data.reward_month}}">한 달</a>
                   {% comment %} 직접 입력은 추후 개발 {% endcomment %}
                   {% comment %} <a class="dropdown-item" href="#">직접 입력...</a> {% endcomment %}
                 </div>
@@ -116,7 +114,7 @@
               <h3 class="card-title" id="calcReward">REWARD</h3> KLAY
               <br/>
               <br/>
-              <a href="#" class="btn btn-success">스테이크 굽기 !</a>
+              <a href="https://klaystation.io/" class="btn btn-success">스테이크 굽기 !</a>
             </div>
           </div>
 
