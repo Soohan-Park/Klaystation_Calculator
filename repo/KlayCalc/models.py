@@ -34,3 +34,9 @@ class Donation(models.Model):
     amount = models.IntegerField(default=0)
     donateDate = models.DateTimeField('Date of Donate')
     pass
+
+
+class RateData(models.Model):
+    date = models.DateField('Date of Rate')
+    rate = models.FloatField(default=0)
+    pass

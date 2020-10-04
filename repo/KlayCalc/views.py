@@ -7,12 +7,6 @@ from selenium import webdriver  # For crawling
 DONATE_ADDR = '0x2eC41C940731c6CEA7275888835F8c2A6B58Ad79'
 TIME_OUT = 3
 
-__SEC = 1
-__MIN = __SEC * 60
-__HOUR = __MIN * 60
-__DAY = __HOUR * 24
-__WEEK = __DAY * 7
-__MONTH = __DAY * 30
 
 # Create your views here.
 def root(request):
@@ -95,10 +89,10 @@ def account(request, account_id = None):
         # reward_week  = temp * ( rate ** (24 * 7) )
         # reward_month = temp * ( rate ** (24 * 30) )
 
-        reward_hour  = "%0.2lf"%reward_hour
-        reward_day   = "%0.2lf"%reward_day
-        reward_week  = "%0.2lf"%reward_week
-        reward_month = "%0.2lf"%reward_month
+        reward_hour  = "%0.3lf"%reward_hour
+        reward_day   = "%0.3lf"%reward_day
+        reward_week  = "%0.3lf"%reward_week
+        reward_month = "%0.3lf"%reward_month
 
         parsed_data['reward_hour']  = reward_hour
         parsed_data['reward_day']   = reward_day 
@@ -190,6 +184,8 @@ def account(request, account_id = None):
     except Exception as err :
         __LOG('[LOG] ERROR >> {}'.format(err))
         err.with_traceback()
+
+        return account(request, account_id)
 
     finally:
         driver.quit()
