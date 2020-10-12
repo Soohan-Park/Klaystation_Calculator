@@ -10,9 +10,8 @@ urlpatterns = [
     path('account/<str:account_id>', views.account, name='account'),
     path('donate/', views.donate, name='donate'),
 
+    path('getRate/', views.getRate, name='getRate'),
+
     # Ajax
     path('checkDonateAddr/', views.checkDonateAddr, name='checkDonateAddr'),
-
-    # test
-    path("test/", views.test, name="test"),
 ]

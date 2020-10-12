@@ -1,9 +1,12 @@
 from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse
+from datetime import datetime
+from .models import RateData
 
 from selenium import webdriver  # For crawling
 
 
+# Global Var.
 DONATE_ADDR = '0x2eC41C940731c6CEA7275888835F8c2A6B58Ad79'
 TIME_OUT = 3
 
@@ -43,7 +46,7 @@ def account(request, account_id = None):
     ##### PARSING START
     try:
         __LOG('[LOG] Start Parsing (with Selenium)')
-         # Selenium Setting
+        # Selenium Setting
         options = webdriver.ChromeOptions()
         options.add_argument('headless')
         options.add_argument('disable-gpu')
@@ -99,12 +102,13 @@ def account(request, account_id = None):
         err.with_traceback()
 
     finally:
-        driver.quit()
+        driver.close()
 
         __LOG('[LOG] End Parsing (with Selenium)')
     ##### PARSING END
 
 
+    # 실패 시 재시도 방안 고려하기
     if len(parsed_data) == 0:
         resYn = False
 
@@ -127,39 +131,47 @@ def checkDonateAddr(request):
     return HttpResponse(True) if DONATE_ADDR == viewAddr else HttpResponse(False)
 
 
+def getRate(request):
+    flag = True
+    rate_annu = None
+
+    try:
+        # Selenium Setting
+        options = webdriver.ChromeOptions()
+        options.add_argument('headless')
+        options.add_argument('disable-gpu')
+        driver = webdriver.Chrome('C:/dev/tools/chromedriver.exe', options=options)
+        driver.implicitly_wait(TIME_OUT)  # 3초 이상 되어야 ERROR가 발생하지 않음
+
+        # URL Setting & Get Data
+        url = 'https://klaystation.io/dashboard'
+        driver.get(url)
+
+        # Parsing Data
+        rate_annu = driver.find_element_by_xpath('//*[@id="router-wrapper"]/div/section/div[2]/div/div[2]/ul/li[3]/div[2]/p/span[1]').text
+        rate_annu = float(rate_annu) / 100
+
+        print("GET RATE ANNU")
+        print(rate_annu)
+    except Exception as err:
+        __LOG('[LOG] ERROR HAS OCCURED (GETRATE) >> {}'.format(err))
+        flag = False
+    finally:
+        driver.quit()
+    
+    try:
+        db = RateData(rate=rate_annu)
+        db.save()
+    except Exception as err:
+        __LOG('[LOG] ERROR HAS OCCURED (GETRATE) >> {}'.format(err))
+        flag = False
+    
+    if flag is False or rate_annu is None:
+        return HttpResponse('Fail.')
+    
+    return HttpResponse('Success!')
+
+
 # Private Func.
 def __LOG(msg):
     print(msg)
-
-
-def test(request):
-    ###
-    return HttpResponse('No Test Now.')
-    ###
-
-    account_id = '0x2eC41C940731c6CEA7275888835F8c2A6B58Ad79 ---'
-
-    # Selenium Setting
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
-    options.add_argument('disable-gpu')
-    driver = webdriver.Chrome('C:/dev/tools/chromedriver.exe', options=options)
-
-    driver.implicitly_wait(3)  # 3초 이상 되어야 ERROR가 발생하지 않음
-
-    # URL Setting
-    url = 'https://klaystation.io/explorer/account/' + account_id
-
-    # Get Data
-    driver.get(url)
-
-    a = driver.find_element_by_xpath('//*[@id="router-wrapper"]/div/section/div[2]/div/div[1]/ul/li[1]/div/p[1]').text
-    b = driver.find_element_by_xpath('//*[@id="router-wrapper"]/div/section/div[2]/div/div[1]/ul/li[2]/div/p[1]').text
-    
-    print("RESULT")
-    print(a)
-    print(b)
-
-    driver.quit()
-
-    return HttpResponse(a + " : " + b)
