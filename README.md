@@ -3,6 +3,12 @@
 <br/>
 
 
+## (Amazon AWS 활용해서 베타 서비스 배포 예정)  
+
+
+<br/>
+
+
 #### 나의 Klaystation 스테이킹 정보 조회 및 예상 보상 갯수 계산.  
 1. **총 스테이킹 수량 / 누적 지급 보상 / 철회중인 수량 / 지갑 내 수량** 조회 가능  
 2. **1시간 / 1일 / 1주 / 1달** 단위로 보상 수량 예측 가능  
@@ -23,11 +29,18 @@ index/
 
 <br/>
 
-**Last Update:** 2020. 10. 03.  
+**Last Update:** 2020. 10. 13.  
 
+
+<br/>
 
 
 ### Version Log  
+
+
+> Vers. v0.3.1  
+> Date. 2020. 10. 13.  
+> Modified Model and Seperate 'get rate' from Account View.  
 
 
 > Vers. v0.3.0  
