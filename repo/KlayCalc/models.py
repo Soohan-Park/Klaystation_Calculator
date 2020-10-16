@@ -33,7 +33,9 @@ class Donation(models.Model):
     name = models.CharField(max_length=20)
     amount = models.IntegerField(default=0)
     donate_date = models.DateTimeField('Date of Donate')
-    pass
+    
+    def __str__(self):
+        return str(self.name) + " :: " + str(self.amount) + " :: " + str(self.donate_date)
 
 
 class RateData(models.Model):
