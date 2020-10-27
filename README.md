@@ -13,7 +13,6 @@
 1. **총 스테이킹 수량 / 누적 지급 보상 / 철회중인 수량 / 지갑 내 수량** 조회 가능  
 2. **1시간 / 1일 / 1주 / 1달** 단위로 보상 수량 예측 가능  
 
-
 <br/>
 
 #### Directory  
@@ -29,7 +28,8 @@ index/
 
 <br/>
 
-**Last Update:** 2020. 10. 13.  
+
+**Last Update:** 2020. 10. 28.  
 
 
 <br/>
@@ -39,8 +39,8 @@ index/
 
 
 > Vers. v0.3.1  
-> Date. 2020. 10. 13.  
-> Modified Model and Seperate 'get rate' from Account View.  
+> Date. 2020. 10. 28.  
+> Add Service Logo.  
 
 
 > Vers. v0.3.0  

@@ -10,6 +10,7 @@ urlpatterns = [
     path('account/<str:account_id>', views.account, name='account'),
     path('donate/', views.donate, name='donate'),
 
+    # for Admin
     path('getRate/', views.getRate, name='getRate'),
 
     # Ajax
