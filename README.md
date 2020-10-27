@@ -28,11 +28,16 @@ index/
 
 <br/>
 
-**Last Update:** 2020. 10. 03.  
+**Last Update:** 2020. 10. 28.  
 
 
 
 ### Version Log  
+
+
+> Vers. v0.3.1  
+> Date. 2020. 10. 28.  
+> Add Service Logo.  
 
 
 > Vers. v0.3.0  
