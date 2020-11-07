@@ -38,6 +38,12 @@ index/
 ### Version Log  
 
 
+> Vers. v0.3.2  
+> Date. 2020. 11. 07.  
+> Apply Get-rate from DB.  
+> Add 'Klayswap' Link.  
+
+
 > Vers. v0.3.1  
 > Date. 2020. 10. 28.  
 > Add Service Logo.  
