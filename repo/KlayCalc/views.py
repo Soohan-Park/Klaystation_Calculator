@@ -62,32 +62,20 @@ def account(request, account_id = None):
         parsed_data['refund']             = refund
         parsed_data['in_wallet']          = in_wallet
 
+        # Get Annu-rate Data
+        rate = RateData.objects.last().rate
 
-        # URL Setting & Get Data
-        url = 'https://klaystation.io/dashboard'
-        driver.get(url)
-
-        # Parsing Data
-        rate_annu = driver.find_element_by_xpath('//*[@id="router-wrapper"]/div/section/div[2]/div/div[2]/ul/li[3]/div[2]/p/span[1]').text
-        rate_annu = float(rate_annu) / 100
-        rate = ( rate_annu / 8760 )  # 시이율(시간당 이율)
-        
         # 일단 단리로 계산
         amount = float(total_staking)
         reward_hour  = amount * rate 
-        reward_day   = amount * rate * 24
-        reward_week  = amount * rate * 24 * 7
-        reward_month = amount * rate * 24 * 30
+        reward_day   = reward_hour * 24
+        reward_week  = reward_day  * 7
+        reward_month = reward_day  * 30
 
-        reward_hour  = "%0.3lf"%reward_hour
-        reward_day   = "%0.3lf"%reward_day
-        reward_week  = "%0.3lf"%reward_week
-        reward_month = "%0.3lf"%reward_month
-
-        parsed_data['reward_hour']  = reward_hour
-        parsed_data['reward_day']   = reward_day 
-        parsed_data['reward_week']  = reward_week
-        parsed_data['reward_month'] = reward_month
+        parsed_data['reward_hour']  = "%0.3lf"%reward_hour
+        parsed_data['reward_day']   = "%0.3lf"%reward_day
+        parsed_data['reward_week']  = "%0.3lf"%reward_week
+        parsed_data['reward_month'] = "%0.3lf"%reward_month
 
         resYn = True
         

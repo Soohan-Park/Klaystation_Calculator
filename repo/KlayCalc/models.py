@@ -29,6 +29,8 @@ from django.utils import timezone
 
 # Not Yet
 class Donation(models.Model):
+    objects = models.Manager()  # To suppress vscode errors
+
     no = models.IntegerField()
     name = models.CharField(max_length=20)
     amount = models.IntegerField(default=0)
@@ -39,6 +41,8 @@ class Donation(models.Model):
 
 
 class RateData(models.Model):
+    objects = models.Manager()  # To suppress vscode errors
+
     date = models.DateField('Date of Rate', default=datetime.datetime.now, editable=False)
     rate = models.FloatField(default=0)
     
