@@ -11,7 +11,7 @@ function calcIndex(_addr) {
 
 $(function () {
     $('#sidebar_index').addClass('active')
-    $('#navbar_title').text('메인')
+    $('#navbar_title').text('클레이스테이션 계산기')
     
     $('#loading').hide()
 
