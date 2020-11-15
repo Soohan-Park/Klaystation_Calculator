@@ -7,9 +7,9 @@ from selenium import webdriver  # For crawling
 
 
 # Global Var.
+SELENIUM_DRIVER_PATH = './KlayCalc/static/klaycalcAssets/files/chromedriver.exe'  # 상대경로
 DONATE_ADDR = '0x2eC41C940731c6CEA7275888835F8c2A6B58Ad79'
 TIME_OUT = 3
-
 
 
 # Create your views here.
@@ -44,7 +44,7 @@ def account(request, account_id = None):
         options = webdriver.ChromeOptions()
         options.add_argument('headless')
         options.add_argument('disable-gpu')
-        driver = webdriver.Chrome('C:/dev/tools/chromedriver.exe', options=options)
+        driver = webdriver.Chrome(SELENIUM_DRIVER_PATH, options=options)
 
         driver.implicitly_wait(TIME_OUT)  # 3초 이상 되어야 ERROR가 발생하지 않음
 
@@ -124,7 +124,7 @@ def getRate(request):
         options = webdriver.ChromeOptions()
         options.add_argument('headless')
         options.add_argument('disable-gpu')
-        driver = webdriver.Chrome('C:/dev/tools/chromedriver.exe', options=options)
+        driver = webdriver.Chrome(SELENIUM_DRIVER_PATH, options=options)
         driver.implicitly_wait(TIME_OUT)  # 3초 이상 되어야 ERROR가 발생하지 않음
 
         # URL Setting & Get Data
