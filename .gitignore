@@ -19,9 +19,8 @@ repo/conf/settings.py
 repo/db.sqlite3
 repo/db.sqlite3-journal
 
-
-### Update soon.
 repo/KlayCalc/static/assets/img/
+repo/KlayCalc/static/klaycalcAssets/files/chromedriver.exe
 
 
 # global
