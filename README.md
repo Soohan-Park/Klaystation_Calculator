@@ -29,13 +29,19 @@ index/
 <br/>
 
 
-**Last Update:** 2020. 11. 07.  
+**Last Update:** 2020. 11. 15.  
 
 
 <br/>
 
 
 ### Version Log  
+
+
+> Vers. v0.3.3  
+> Date. 2020. 11. 15.  
+> Update Sidebar's Background IMG.  
+> Modified Selenium Webdriver PATH.  
 
 
 > Vers. v0.3.2  
