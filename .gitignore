@@ -27,3 +27,4 @@ repo/KlayCalc/static/klaycalcAssets/files/chromedriver.exe
 *.log
 *.pot
 *.pyc
+*.ini
